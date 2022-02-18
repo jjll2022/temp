@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0ae631"],{"0a9c":function(n,e,t){"use strict";t.r(e);var a=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("h1",[n._v(" 수업료 페이지 ")])},c=[],u={name:"Tuition"},i=u,o=t("2877"),r=Object(o["a"])(i,a,c,!1,null,"188d7bb9",null);e["default"]=r.exports}}]);
+//# sourceMappingURL=chunk-2d0ae631.fc3661fa.js.map

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/temp/precache-manifest.aa4712c9bdd0b2cfd8a52c873c0a6efb.js"
+  "/temp/precache-manifest.4ee04c5fe3447dfba778fc927e4730a7.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "SkyCastle"});
