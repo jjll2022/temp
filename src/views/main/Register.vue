@@ -21,7 +21,7 @@
 <!--                </v-avatar>-->
               </v-col>
 
-              <v-col cols="12" class="text-center"> Join Us</v-col>
+              <v-col cols="12" class="text-center"> 회원가입 </v-col>
             </v-row>
 
             <v-row no-gutters justify="center" align="center" class="px-5 text-h4">
@@ -129,18 +129,18 @@
               <v-col cols="10" class="text-center">
                 <v-radio-group v-model="mainData.type" mandatory column>
                   <template v-slot:label>
-                    <div class="text-center">What do you <strong>want</strong> to be?</div>
+                    <div class="text-center">지금 <strong>가입</strong> 하세요!</div>
                   </template>
                   <v-radio value="learner">
                     <template v-slot:label>
                       <div class="text-center">
-                        <strong class="success--text">Learner</strong>
+                        <strong class="success--text">학생</strong>
                       </div>
                     </template>
                   </v-radio>
                   <v-radio value="instructor">
                     <template v-slot:label>
-                      <div class="text-center"><strong class="blue--text">Instructor</strong></div>
+                      <div class="text-center"><strong class="blue--text">선생님</strong></div>
                     </template>
                   </v-radio>
                 </v-radio-group>
@@ -169,6 +169,7 @@
 
 <script>
 import api from '@/api';
+// import * as yup from 'yup';
 
 export default {
   data() {

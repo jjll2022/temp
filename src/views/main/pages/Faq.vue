@@ -2,7 +2,7 @@
 
   <v-container
     id="success-section"
-    class="new-container"
+    class="center-horizontally"
     :class="{
         'mb-0': $vuetify.breakpoint.smAndDown,
         'mt-0': $vuetify.breakpoint.smAndDown,
@@ -11,51 +11,89 @@
       }"
   >
 
-        <VueFaqAccordion
-          :items="data"> </VueFaqAccordion>
-<!--        <h2-->
-<!--          class="mb-10 mt-10 font-weight-bold"-->
-<!--          :class="{-->
-<!--              'text-h3': $vuetify.breakpoint.smAndDown,-->
-<!--              'text-center': $vuetify.breakpoint.smAndDown,-->
-<!--              'text-h2': $vuetify.breakpoint.md,-->
-<!--              'text-large': $vuetify.breakpoint.lgAndUp,-->
-<!--            }"-->
-<!--        >-->
-<!--          [고쳐야함] 자녀를 끝까지 책임져줄수 있는 최상위급 과외 플랫폼-->
-<!--        </h2>-->
-<!--        <p-->
-<!--          class="mb-5 mt-5 font-weight-light"-->
-<!--          :class="{-->
-<!--              'text-subtitle-1': $vuetify.breakpoint.smAndDown,-->
-<!--              'text-center': $vuetify.breakpoint.smAndDown,-->
-<!--              'text-h3': $vuetify.breakpoint.mdAndUp,-->
-<!--            }"-->
-<!--        >-->
-<!--          Find great instructors. Enrich your knowlage. Take your future to the next level.-->
-<!--        </p>-->
-<!--        <v-btn-->
-<!--          x-large-->
-<!--          width="200"-->
-<!--          height="80"-->
-<!--          to="/register"-->
-<!--          color="primary"-->
-<!--          class="white&#45;&#45;text mb-10 text-h4"-->
-<!--          outlined-->
-<!--          :class="{-->
-<!--              'text-subtitle-1': $vuetify.breakpoint.smAndDown,-->
-<!--              'text-center': $vuetify.breakpoint.smAndDown,-->
-<!--            }"-->
-<!--        >-->
-<!--          Join now-->
-<!--        </v-btn>-->
+    <v-row dense>
+      <v-col cols="12">
+        <v-card
+          color="accent"
+          dark
+        >
+          <VueFaqAccordion
+            :items="data"> </VueFaqAccordion>
+<!--          <v-card-title class="text-h5">-->
+<!--            Unlimited music now-->
+<!--          </v-card-title>-->
 
+<!--          <v-card-subtitle>Listen to your favorite artists and albums whenever and-->
+<!--            wherever, online and offline.</v-card-subtitle>-->
+
+<!--          <v-card-actions>-->
+<!--            <v-btn text>-->
+<!--              Listen Now-->
+<!--            </v-btn>-->
+<!--          </v-card-actions>-->
+        </v-card>
+      </v-col>
+
+      <v-col
+        v-for="(item, i) in items"
+        :key="i"
+        cols="12"
+      >
+        <v-card
+          :color="item.color"
+          dark
+        >
+          <div class="d-flex flex-no-wrap justify-space-between">
+            <div>
+              <v-card-title
+                class="text-h5"
+                v-text="item.title"
+              ></v-card-title>
+
+              <v-card-subtitle v-text="item.artist"></v-card-subtitle>
+
+              <v-card-actions>
+                <v-btn
+                  v-if="item.artist === 'Ellie Goulding'"
+                  class="ml-2 mt-3"
+                  fab
+                  icon
+                  height="40px"
+                  right
+                  width="40px"
+                >
+                  <v-icon>mdi-play</v-icon>
+                </v-btn>
+
+                <v-btn
+                  v-else
+                  class="ml-2 mt-5"
+                  outlined
+                  rounded
+                  small
+                >
+                  START RADIO
+                </v-btn>
+              </v-card-actions>
+            </div>
+
+            <v-avatar
+              class="ma-3"
+              size="125"
+              tile
+            >
+              <v-img :src="item.src"></v-img>
+            </v-avatar>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
 import VueFaqAccordion from 'vue-faq-accordion';
-import info from '../../../info';
+import info from '../../../../info';
 
 export default {
   components: {
@@ -156,17 +194,17 @@ export default {
     align-items: center;
     flex-direction: column;
     margin-bottom: 30px;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
   }
   .courses-container {
     background-color: rgb(245, 245, 245);
   }
   .hero-container {
     /*background: url(../../assets/img-home-2.jpg) center center/cover no-repeat;*/
-    background-color: #ffcccb;
+    /*background-color: #ffcccb;*/
     height: calc(100vh - 70px);
     width: 100%;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    /*box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);*/
     object-fit: contain;
     display: flex;
     flex-direction: column;

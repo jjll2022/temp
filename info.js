@@ -30,6 +30,11 @@ const info = {
       value: 'Give us some time',
       category: '기타',
     },
+    {
+      title: '얼마에요?',
+      value: 'Give us some time',
+      category: '기타',
+    },
   ],
 };
 

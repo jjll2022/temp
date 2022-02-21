@@ -26,7 +26,22 @@ const routes = [
       {
         path: '/faq',
         name: 'faq',
-        component: () => import('@/views/main/Faq'),
+        component: () => import('@/views/main/pages/Faq'),
+      },
+      {
+        path: '/review',
+        name: 'review',
+        component: () => import('@/views/main/pages/Review'),
+      },
+      {
+        path: '/tuition',
+        name: 'tuition',
+        component: () => import('@/views/main/pages/Tuition'),
+      },
+      {
+        path: '/intro',
+        name: 'intro',
+        component: () => import('@/views/main/pages/Intro'),
       },
       {
         path: '/feed',
